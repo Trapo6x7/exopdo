@@ -23,17 +23,20 @@ try {
 </head>
 <body>
     <h1>LISTE DES PATIENTS</h1>
-
-    <?php
+<br><br>
+<section class="container">    <a href="./ajout-patient.php" class='center'>AJOUTER UN PATIENT</a>   <?php
         foreach ($patients as $patient) {
         ?>
-            <li>Nom : <?= $patient['lastname']  ?> | Prénom : <?= $patient['firstname']  ?> </li>
-
+            <li class="container">Nom : <?= $patient['lastname']  ?> | Prénom : <?= $patient['firstname']  ?> |
+            Date de naissance : <?= $patient['birthdate']  ?> | Téléphone : <?= $patient['phone']  ?> |
+            Mail : <?= $patient['mail']  ?> <a href="./profil-patient.php?id=<?= $patient['id']?>">VOIR +</a> </li>
         <?php
         }
 
         ?>
+<br><br>
+<a href="./index.php"  class="center">ACCEUIL</a>
+  </section>
 
-     <a href="./ajout-patient.php">AJOUTER UN PATIENT</a>
 </body>
 </html>

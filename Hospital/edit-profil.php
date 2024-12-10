@@ -15,9 +15,9 @@
 </head>
 
 <body>
-    <h1>AJOUTER UN PATIENT</h1>
+    <h1>EDITER LE PROFIL D'UN PATIENT</h1>
 
-    <form action="./process/process.php" method="post" class="container ">
+    <form action="./process/editprocess.php?id=<?=$patientId = $_GET["id"]?>" method="post" class="container">
 
         <label for="lastname">Nom du patient :</label>
         <input type="text" name="lastname" id="lastname">
@@ -34,8 +34,7 @@
         <label for="mail">Email :</label>
         <input type="email" name="mail" id="mail">
 
-        <input type="submit" value="send" class="submit"> 
-           <a href="./index.php" class="center">ACCEUIL</a>
+        <input type="submit" value="send">
     </form>
 <?php
 
@@ -51,7 +50,7 @@
 
 ?>
 
-
+    <a href="./index.php"  class="center">ACCEUIL</a>
 </body>
 
 </html>

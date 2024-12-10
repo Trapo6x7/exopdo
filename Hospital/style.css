@@ -1,4 +1,140 @@
+/* Reset de base */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc; /* Fond doux et neutre */
+    color: #333; /* Texte gris foncé pour la lisibilité */
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* En-tête */
+  header {
+    background-color: #0057a8; /* Bleu médical professionnel */
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-bottom: 4px solid #003f72; /* Accent sur le contraste */
+  }
+  
+  /* Conteneur principal */
+  .container {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Titre de section */
+  h1, h2, li {
+    color: #0057a8;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+  
+  /* Tableau des données */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #0057a8;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  tr:hover {
+    background-color: #eef5ff; /* Survol doux */
+  }
+  
+  /* Boutons */
+  a {
+    background-color: #0057a8;
+    color: white;
+    border: none;
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  a:hover {
+    background-color: #003f72;
+  }
+  
+  .submit{
+    background-color: #0057a8;
+    color: white;
+    border: none;
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Formulaires */
+  form {
+    margin-top: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #0057a8;
+  }
+  
+  input, select, textarea {
+    width: 80%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    border-color: #0057a8;
+    outline: none;
+    background-color: #eef5ff;
+  }
+
+.imgpatient {
+  width: 100px;
+  height: 100px;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
 }

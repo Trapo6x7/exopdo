@@ -13,9 +13,9 @@
 
 <body>
     <h1>HOSPITAL HELPER</h1>
-    
-    <a href="./liste-patients.php">LISTE DES PATIENTS</a>
-    <a href="./ajout-patient.php">AJOUTER UN PATIENT</a>
+    <div class="container">  <a href="./liste-patients.php">LISTE DES PATIENTS</a>
+    <a href="./ajout-patient.php">AJOUTER UN PATIENT</a></div>
+  
 </body>
 
 </html>

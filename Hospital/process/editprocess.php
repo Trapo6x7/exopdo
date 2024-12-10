@@ -36,7 +36,7 @@ $lastname = htmlspecialchars(trim($_POST['lastname']));
 $birthdate = htmlspecialchars(trim($_POST['birthdate']));
 $phone = htmlspecialchars(trim($_POST['phone']));
 $mail = htmlspecialchars(trim($_POST['mail']));
-
+$patientId = htmlspecialchars(trim($_GET['id']));;
 
 // // a remplir en fonction de vos prerequis
 // if(
@@ -63,7 +63,17 @@ $mail = htmlspecialchars(trim($_POST['mail']));
 
 require_once '../connectdb/connect-db.php';
 
-$sql = "INSERT INTO patients (lastname,firstname,birthdate,phone,mail) VALUES (:lastname,:firstname,:birthdate,:phone,:mail)";
+// $patientId = $_GET["id"];
+
+
+
+$sql = "UPDATE patients
+SET lastname = :lastname,
+  firstname =:firstname,
+  birthdate = :birthdate,
+  phone =:phone,
+  mail = :mail
+WHERE id =" . $patientId;
 
 try {
 
@@ -75,4 +85,5 @@ try {
     echo "Erreur lors de la requete : " . $error->getMessage();
 }
 
-header('location: ../index.php');
+header('location:../liste-patients.php')
+?> 
