@@ -26,6 +26,13 @@ try {
 <body>
     <h1>LISTE DES PATIENTS</h1>
     <br><br>
+
+    <form method="post" action="./process/search.php" class="container">
+        <input type="text" name="search" placeholder="Chercher un patient">
+        <input type="submit" value="CHERCHER">
+    </form>
+
+    <br><br>
     <section class="container"> <a href="./ajout-patient.php" class='center'>AJOUTER UN PATIENT</a>
         <?php
         foreach ($patients as $patient) {

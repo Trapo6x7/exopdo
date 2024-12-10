@@ -75,4 +75,4 @@ try {
     echo "Erreur lors de la requete : " . $error->getMessage();
 }
 
-header('location: ../index.php');
+header('location: ../liste-patients.php');
