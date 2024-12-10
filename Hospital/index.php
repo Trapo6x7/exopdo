@@ -13,9 +13,14 @@
 
 <body>
     <h1>HOSPITAL HELPER</h1>
-    <div class="container">  <a href="./liste-patients.php">LISTE DES PATIENTS</a>
-    <a href="./ajout-patient.php">AJOUTER UN PATIENT</a></div>
-  
+    <div class="container"> <a href="./liste-patients.php">LISTE DES PATIENTS</a>
+        <a href="./ajout-patient.php">AJOUTER UN PATIENT</a>
+    </div>
+
+    <div class="container"> <a href="./ajout-rdv.php">AJOUTER UN RDV</a>
+        <a href="./liste-rdv.php">LISTE DES RDV</a>
+    </div>
+
 </body>
 
 </html>
