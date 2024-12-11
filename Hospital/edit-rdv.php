@@ -1,5 +1,15 @@
 <?php
+require_once './connectdb/connect-db.php';
 
+$sql = "SELECT * FROM `patients`";
+
+try {
+    $stmt = $pdo->query($sql);
+    $patients = $stmt->fetchAll(PDO::FETCH_ASSOC); // ou fetch si vous savez que vous n'allez avoir qu'un seul résultat
+
+} catch (PDOException $error) {
+    echo "Erreur lors de la requete : " . $error->getMessage();
+}
 
 
 ?>
@@ -20,28 +30,37 @@
     <form action="./process/processrdv.php" method="post" class="container ">
 
         <label for="dateHour">Date et heure :</label>
-        <input type="time" name="dateHour" id="dateHour">
+        <input type="datetime-local" name="dateHour" id="dateHour">
 
-        <label for="idPatients">Numéro du patient:</label>
-        <input type="number" name="idPatients" id="idPatients">
+        <label for="idPatients">Patient:</label>
+        <select name="idPatients" id="idPatients">
 
-        <input type="submit" value="send" class="submit"> 
+            <?php
+            foreach ($patients as $patient) {
+            ?>
+                <option value="<?= $patient['id'] ?>"><?= $patient['firstname'] ?> <?= $patient['lastname'] ?></option>
+            <?php
+            }
+            ?>
+        </select>
 
-           <a href="./index.php" class="center">ACCEUIL</a>
+        <input type="submit" value="send" class="submit">
+
+        <a href="./index.php" class="center">ACCEUIL</a>
     </form>
-<?php
+    <?php
 
-// $sql = "INSERT INTO patients VALUES (:lastname, :firstname,:birthdate,:phone,:mail)";
+    // $sql = "INSERT INTO patients VALUES (:lastname, :firstname,:birthdate,:phone,:mail)";
 
-// try {
-//     $stmt = $pdo->prepare($sql);
-//     $patients = $stmt->execute([':lastname' => $lastname, ':firstname ' => $firstname, ':birthdate ' => $birthdate, ':phone ' => $phone, ':mail' => $mail]);
-    
-// } catch (PDOException $error) {
-//     echo "Erreur lors de la requete : " . $error->getMessage();
-// }
+    // try {
+    //     $stmt = $pdo->prepare($sql);
+    //     $patients = $stmt->execute([':lastname' => $lastname, ':firstname ' => $firstname, ':birthdate ' => $birthdate, ':phone ' => $phone, ':mail' => $mail]);
 
-?>
+    // } catch (PDOException $error) {
+    //     echo "Erreur lors de la requete : " . $error->getMessage();
+    // }
+
+    ?>
 
 
 </body>

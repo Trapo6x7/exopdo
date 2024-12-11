@@ -57,8 +57,6 @@ require_once '../connectdb/connect-db.php';
 
 $sql = "INSERT INTO appointments (dateHour,idPatients) VALUES (:dateHour,:idPatients)";
 
-
-
 try {
 
     $stmt = $pdo->prepare($sql);

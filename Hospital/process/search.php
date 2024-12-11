@@ -53,12 +53,12 @@ die();
 
 require_once '../connectdb/connect-db.php';
 
-$sql = "SELECT * FROM patients WHERE lastname LIKE %" . $search ."%";
+$sql = "SELECT * FROM patients WHERE lastname LIKE %:search%";
 
 try {
 
     $stmt = $pdo->prepare($sql);
-    $research = $stmt->execute([':lastname' => $search]);
+    $research = $stmt->execute([':search' => $search]);
 
 
 } catch (PDOException $error) {
