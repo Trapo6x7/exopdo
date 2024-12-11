@@ -27,7 +27,7 @@ try {
 <body>
     <h1>AJOUTER UN RENDEZ VOUS</h1>
 
-    <form action="./process/processrdv.php" method="post" class="container ">
+    <form action="./process/editprocessrdv.php" method="post" class="container ">
 
         <label for="dateHour">Date et heure :</label>
         <input type="datetime-local" name="dateHour" id="dateHour">

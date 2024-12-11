@@ -3,7 +3,7 @@ try {
 
 
     $host = "localhost";
-    $dbname = "hospitale2n";
+    $dbname = "hospitalE2n";
     $login = "root";
     $password = "";
 
